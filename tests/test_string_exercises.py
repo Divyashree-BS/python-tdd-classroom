@@ -1,12 +1,12 @@
-
 import unittest
 from src.string_exercise import StringExercise
+from tests import *
 
 
 class TestExercise(unittest.TestCase):
 
     def setUp(self):
-        self.string_exercise = StringExercise()   # Instantiate object of StringExercise class for testing
+        self.string_exercise = StringExercise()  # Instantiate object of StringExercise class for testing
 
     def test_reverse_string(self):
         text = "foobar"
@@ -46,7 +46,7 @@ class TestExercise(unittest.TestCase):
         text = "Three tomatoes are walking down the street"
         expected = [5, 8, 3, 7, 4, 3, 6]
         actual = self.string_exercise.get_word_lengths(text)
-        self.assertEqual(expected, actual) 
+        self.assertEqual(expected, actual)
 
     def tearDown(self):
-        pass   # If needed, do final unstubbing/unmocking here, like calling unittest.unstub()
+        pass  # If needed, do final unstubbing/unmocking here, like calling unittest.unstub()
